@@ -3,7 +3,7 @@
 var fs = require('fs');
 var templateHtml = fs.readFileSync(__dirname + '/<%= templateFileName %>.html');
 
-module.exports = function NewComponent() {
+module.exports = function <%= methodName %>() {
     var directive = {};
 
     directive.template = templateHtml;
@@ -12,7 +12,7 @@ module.exports = function NewComponent() {
     directive.controllerAs = 'vm';
 
     // @ngInject
-    directive.controller = function NewComponentController() {
+    directive.controller = function <%= methodName %>Controller() {
         var vm = this;
     };
 
