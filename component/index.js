@@ -6,17 +6,20 @@ module.exports = generators.Base.extend({
 		this.argument('componentName', { type: String, required: true });
   	},
 	writeFile: function() {
+      var name = this.componentName;
+      
   		this.fs.copyTpl(
   			this.templatePath('component.html'),
-  			this.destinationPath(this.componentName + '/' + this.componentName + '.html')
+  			this.destinationPath(name + '/' + name + '.html')
   		);
   		this.fs.copyTpl(
   			this.templatePath('component.js'),
-  			this.destinationPath(this.componentName + '/' + this.componentName + '.js')
+  			this.destinationPath(name + '/' + name + '.js'),
+        {templateFileName: name}
   		);
   		this.fs.copyTpl(
   			this.templatePath('component.less'),
-  			this.destinationPath(this.componentName + '/' + this.componentName + '.less')
+  			this.destinationPath(name + '/' + name + '.less')
   		);
 	},
 	complete: function() {
