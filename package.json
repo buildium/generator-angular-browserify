@@ -1,0 +1,12 @@
+{
+  "name": "generator-angular-components",
+  "version": "0.1.0",
+  "description": "Angular 1.x component and app yeoman generator",
+  "files": [
+    "app",
+    "component"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.3"
+  }
+}

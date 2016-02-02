@@ -1,0 +1,1 @@
+Angular 1.x component and app yeoman generator
