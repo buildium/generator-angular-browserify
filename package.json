@@ -7,6 +7,7 @@
     "component"
   ],
   "dependencies": {
+    "chalk": "^1.1.1",
     "yeoman-generator": "^0.20.3"
   }
 }

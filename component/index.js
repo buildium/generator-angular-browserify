@@ -1,4 +1,5 @@
 var generators = require('yeoman-generator');
+var chalk = require('chalk');
 
 module.exports = generators.Base.extend({
   constructor: function () {
@@ -37,6 +38,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
   complete: function() {
-    this.log('Successfully created new component!');
+    this.log(chalk.bold.red('Hey, buddy!  Add this folder to the project in Visual Studio!!!'));
+    this.log(chalk.bold.green('Successfully created new component...'));
   }
 });
