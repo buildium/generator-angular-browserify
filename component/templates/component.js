@@ -13,7 +13,7 @@ module.exports = function <%= methodName %>() {
 
     // @ngInject
     directive.controller = function <%= methodName %>Controller() {
-        var vm = this;
+        //var vm = this;
     };
 
     return directive;
