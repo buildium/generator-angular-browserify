@@ -43,14 +43,19 @@ my-new-component/
 
 When creating a new component, you will be prompted with two questions:
 
-<ul>
-    <li>Would you like to include a LESS file? (self explanatory...)</li>
-    <li>What would you like to call the main function in this component?</li>
-</ul>
+* Would you like to include a LESS file? (self explanatory...)</li>
+* What would you like to call the main function in this component?</li>
 
 This will name the outer wrapper function of the component, and construct the name of the controller function within the component.
 
+###Services
 
+When creating a new service, you will be prompted with two questions:
+
+* What would you like to call the service? (Default: *NewService*)</li>
+* What is the output subdirectory? (Default: *services*)</li>
+
+This will name the outer wrapper function of the service, and create the service file in the specified subdirectory.
 
 #License
 
