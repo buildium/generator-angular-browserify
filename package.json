@@ -2,6 +2,8 @@
   "name": "generator-angular-components",
   "version": "0.1.0",
   "description": "Angular 1.x component and app yeoman generator",
+  "author": "Mike DeWitt <mdewitt07@gmail.com>",
+  "license": "MIT",
   "files": [
     "app",
     "component"
