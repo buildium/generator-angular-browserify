@@ -27,7 +27,7 @@ module.exports = generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('service.js'),
         this.destinationPath(answers.directory + '/' + name + '.js'),
-          {templateFileName: name, methodName: answers.methodName}
+        {methodName: answers.methodName}
       );
 
       done();
@@ -36,6 +36,6 @@ module.exports = generators.Base.extend({
   complete: function() {
     this.log(chalk.bold.red('Hey, buddy!  Add this folder to the project in Visual Studio!!! \n \n'));
     this.log(chalk.bold.red('Solution Explorer -> Show All Files -> right click on the new component directory and Include In Project\n \n'));
-    this.log(chalk.bold.green('Successfully created new component...'));
+    this.log(chalk.bold.green('Successfully created new service...'));
   }
 });
