@@ -32,9 +32,9 @@ Using the argument as a name, this command will create a new directory and boile
 
 ```
 my-new-component/
-    -my-new-component.html
-    -my-new-component.js
-    -my-new-component.less
+    my-new-component.html
+    my-new-component.js
+    my-new-component.less
 ```
 
 #Options
@@ -44,7 +44,7 @@ my-new-component/
 When creating a new component, you will be prompted with two questions:
 
 <ul>
-    <li>Would you like to incluse a LESS file? (self explanatory...)</li>
+    <li>Would you like to include a LESS file? (self explanatory...)</li>
     <li>What would you like to call the main function in this component?</li>
 </ul>
 
