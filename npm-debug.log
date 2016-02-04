@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.6
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\buildium\\src\\generator-angular-browserify',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\Michael DeWitt\\AppData\\Roaming\\npm-cache\\generator-angular-browserify\\0.1.0\\package.tgz',
+9 verbose tar pack   'C:\\buildium\\src\\generator-angular-browserify' ]
+10 verbose tarball C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package.tgz
+11 verbose folder C:\buildium\src\generator-angular-browserify
+12 info prepublish generator-angular-browserify@0.1.0
+13 verbose addLocalTarball adding from inside cache C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package.tgz
+14 silly cache afterAdd generator-angular-browserify@0.1.0
+15 verbose afterAdd C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package\package.json written
+17 silly publish { name: 'generator-angular-browserify',
+17 silly publish   version: '0.1.0',
+17 silly publish   description: 'Angular 1.x/Browserify component and app yeoman generator',
+17 silly publish   author: { name: 'Mike DeWitt', email: 'mdewitt07@gmail.com' },
+17 silly publish   license: 'MIT',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/buildium/generator-angular-browserify.git' },
+17 silly publish   files: [ 'app', 'component', 'service' ],
+17 silly publish   dependencies: { chalk: '^1.1.1', 'yeoman-generator': '^0.20.3' },
+17 silly publish   readme: 'Angular 1.x/Browserify component and app Yeoman generator\r\n\r\n#Usage\r\n\r\nInstall Yeoman\r\n\r\n```\r\nnpm install -g yo\r\n```\r\n\r\nInstall this generator via npm:\r\n\r\n```\r\nnpm install --global generator-angular-browserify\r\n```\r\n\r\nTry running the component sub generator locally:\r\n\r\n```\r\nyo angular-browserify:component my-new-component\r\n```\r\n\r\nUsing the argument as a name, this command will create a new directory and boilerplate files for your component:\r\n\r\n```\r\nmy-new-component/\r\n    my-new-component.html\r\n    my-new-component.js\r\n    my-new-component.less\r\n```\r\n\r\n#Options\r\n\r\n###Components\r\n\r\nWhen creating a new component, you will be prompted with two questions:\r\n\r\n* Would you like to include a LESS file? (self explanatory...)</li>\r\n* What would you like to call the main function in this component?</li>\r\n\r\nThis will name the outer wrapper function of the component, and construct the name of the controller function within the component.\r\n\r\n###Services\r\n\r\nWhen creating a new service, you will be prompted with two questions:\r\n\r\n* What would you like to call the service? (Default: *NewService*)</li>\r\n* What is the output subdirectory? (Default: *services*)</li>\r\n\r\nThis will name the outer wrapper function of the service, and create the service file in the specified subdirectory.\r\n\r\n#License\r\n\r\nThe MIT License (MIT)\r\n\r\nCopyright (c) 2016 Buildium\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n',
+17 silly publish   readmeFilename: 'README.MD',
+17 silly publish   gitHead: '6eddca4a0a787053b7fa5b9fbbc7348c245a431b',
+17 silly publish   bugs: { url: 'https://github.com/buildium/generator-angular-browserify/issues' },
+17 silly publish   homepage: 'https://github.com/buildium/generator-angular-browserify#readme',
+17 silly publish   _id: 'generator-angular-browserify@0.1.0',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: 'daf34f908a6cc1c710cefbffaaaff2bc3a92d8c8',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name generator-angular-browserify
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/generator-angular-browserify
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\generator-angular-browserify\0.1.0\package.tgz
+25 verbose request uri https://registry.npmjs.org/generator-angular-browserify
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 1:11:40 PM
+28 verbose request using bearer token for auth
+29 verbose request id c14805dfeed85c66
+30 http request PUT https://registry.npmjs.org/generator-angular-browserify
+31 http 403 https://registry.npmjs.org/generator-angular-browserify
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Thu, 04 Feb 2016 18:11:41 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-jfk1020-JFK',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1454609500.675490,VS0,VE583' }
+33 verbose request invalidating C:\Users\Michael DeWitt\AppData\Roaming\npm-cache\registry.npmjs.org\generator-angular-browserify on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 0.1.0." : generator-angular-browserify
+35 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:247:14)
+35 verbose stack     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:170:14)
+35 verbose stack     at Request.self.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:354:22)
+35 verbose stack     at Request.emit (events.js:110:17)
+35 verbose stack     at Request.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1207:14)
+35 verbose stack     at Request.emit (events.js:129:20)
+35 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1153:12)
+35 verbose stack     at IncomingMessage.emit (events.js:129:20)
+35 verbose stack     at _stream_readable.js:908:16
+35 verbose stack     at process._tickCallback (node.js:355:11)
+36 verbose statusCode 403
+37 verbose pkgid generator-angular-browserify
+38 verbose cwd C:\buildium\src\generator-angular-browserify
+39 error Windows_NT 6.3.9600
+40 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+41 error node v0.12.6
+42 error npm  v2.11.2
+43 error code E403
+44 error "You cannot publish over the previously published version 0.1.0." : generator-angular-browserify
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
