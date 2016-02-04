@@ -11,10 +11,13 @@
   "files": [
     "app",
     "component",
-    "service"
+    "service",
+    "state"
   ],
   "dependencies": {
+    "ast-query": "^1.1.0",
     "chalk": "^1.1.1",
+    "html-wiring": "^1.2.0",
     "yeoman-generator": "^0.20.3"
   }
 }
