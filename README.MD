@@ -8,21 +8,13 @@ Install Yeoman
 npm install -g yo
 ```
 
-This generator is currently not available on npm, so to get started, clone this repository locally.
-
-In the root of the repository, run:
+Install this generator via npm:
 
 ```
-npm install
+npm install --global generator-angular-browserify
 ```
 
-and then
-
-```
-npm link
-```
-
-The generator will now be available locally.  Run the component sub generator using:
+Try running the component sub generator locally:
 
 ```
 yo angular-browserify:component my-new-component
