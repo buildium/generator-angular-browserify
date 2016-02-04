@@ -25,7 +25,7 @@ npm link
 The generator will now be available locally.  Run the component sub generator using:
 
 ```
-yo angular-components:component my-new-component
+yo angular-browserify:component my-new-component
 ```
 
 Using the argument as a name, this command will create a new directory and boilerplate files for your component:
