@@ -8,21 +8,13 @@ Install Yeoman
 npm install -g yo
 ```
 
-This generator is currently not available on npm, so to get started, clone this repository locally.
-
-In the root of the repository, run:
+Install the generator
 
 ```
-npm install
+npm install -g generator-angular-browserify
 ```
 
-and then
-
-```
-npm link
-```
-
-The generator will now be available locally.  Run the component sub generator using:
+Run the component sub generator using:
 
 ```
 yo angular-browserify:component my-new-component
@@ -43,8 +35,8 @@ my-new-component/
 
 When creating a new component, you will be prompted with two questions:
 
-* Would you like to include a LESS file? (self explanatory...)</li>
-* What would you like to call the main function in this component?</li>
+* Would you like to include a LESS file? (self explanatory...)
+* What would you like to call the main function in this component?
 
 This will name the outer wrapper function of the component, and construct the name of the controller function within the component.
 
@@ -52,10 +44,25 @@ This will name the outer wrapper function of the component, and construct the na
 
 When creating a new service, you will be prompted with two questions:
 
-* What would you like to call the service? (Default: *NewService*)</li>
-* What is the output subdirectory? (Default: *services*)</li>
+* What would you like to call the service? (Default: *NewService*)
+* What is the output subdirectory? (Default: *services*)
 
 This will name the outer wrapper function of the service, and create the service file in the specified subdirectory.
+
+###State (Redux)
+When creating state slices for using Redux, you will be prompted with two questions:
+
+* Create state slice in its own folder in state/? (Default: *Yes*)
+* Add new slice to state/index.js (if it already exists)? (Default: *Yes*)
+
+This will create reducer and actions files. If there's no current state folder, it will create one with an index.js file
+that requires the newly created reducer, and adds an empty action-names.js file.
+
+If you choose yes to the first question, the reducer and actions files will be created in a subfolder of state/
+
+If you choose yes to the second question, it will attempt to update the existing index.js file in state/ to include
+the new reducer.
+* 
 
 #License
 
