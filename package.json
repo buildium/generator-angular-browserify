@@ -1,12 +1,17 @@
 {
-  "name": "generator-angular-components",
+  "name": "generator-angular-browserify",
   "version": "0.1.0",
-  "description": "Angular 1.x component and app yeoman generator",
+  "description": "Angular 1.x/Browserify component and app yeoman generator",
   "author": "Mike DeWitt <mdewitt07@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildium/generator-angular-browserify"
+  },
   "files": [
     "app",
-    "component"
+    "component",
+    "service"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
