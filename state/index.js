@@ -2,7 +2,8 @@ var generators = require('yeoman-generator');
 var chalk = require('chalk');
 var fs = require('fs');
 var program = require('ast-query');
-var readFileAsString = require("html-wiring").readFileAsString;
+var readFileAsString = require('html-wiring').readFileAsString;
+var helpers = require('../lib/helpers');
 
 var prompts = [{
   type: 'confirm',
@@ -17,24 +18,6 @@ var prompts = [{
     default: true
   }];
 
-function normalizeName(name) {
-  return name.split(/(?=[A-Z])/)
-    .join('-')
-    .toLowerCase();
-}
-
-function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1)
-}
-
-function camelCase(name) {
-  return name.split('-').map(capitalize).join('');
-}
-
-function lowerFirstLetter(word) {
-  return word.charAt(0).toLowerCase() + word.slice(1)
-}
-
 module.exports = generators.Base.extend({
   constructor: function() {
     generators.Base.apply(this, arguments);
@@ -42,8 +25,8 @@ module.exports = generators.Base.extend({
   },
   createFiles: function() {
     var done = this.async();
-    var name = normalizeName(this.stateName);
-    var nameCamelCase = camelCase(name);
+    var name = helpers.normalizeName(this.stateName);
+    var nameCamelCase = helpers.camelCase(name);
 
     this.prompt(prompts, function promptCallback(answers) {
       var stateNameFolder = answers.createAsSubfolder
@@ -65,7 +48,7 @@ module.exports = generators.Base.extend({
         var tree = program(readFileAsString('state/index.js'));
         tree.assignment('module.exports')
           .value()
-          .key(lowerFirstLetter(nameCamelCase))
+          .key(helpers.lowerFirstLetter(nameCamelCase))
           .value('require(\'./' + stateNameFolder + '-reducer.js\')');
         this.fs.write('state/index.js', tree.toString());
       }
@@ -85,8 +68,7 @@ module.exports = generators.Base.extend({
   },
   complete: function() {
     this.log(chalk.bold.red('If this is a whole new state folder, make sure you require it as the third parameter of createReduxApp in your app\'s index.js \n'));
-    this.log(chalk.bold.red('Hey, buddy!  Add this folder to the project in Visual Studio!!! \n \n'));
-    this.log(chalk.bold.red('Solution Explorer -> Show All Files -> right click on the new component directory and Include In Project\n \n'));
-    this.log(chalk.bold.green('Successfully created new service...'));
+    helpers.logVSWarning(this.log);
+    this.log(chalk.bold.green('Successfully created new state slice...'));
   }
 });
