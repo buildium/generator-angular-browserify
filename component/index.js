@@ -1,5 +1,6 @@
 var generators = require('yeoman-generator');
 var chalk = require('chalk');
+var helpers = require('../lib/helpers');
 
 var prompts = [{
       type    : 'confirm',
@@ -45,8 +46,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
   complete: function() {
-    this.log(chalk.bold.red('Hey, buddy!  Add this folder to the project in Visual Studio!!! \n \n'));
-    this.log(chalk.bold.red('Solution Explorer -> Show All Files -> right click on the new component directory and Include In Project\n \n'));
+    helpers.logVSWarning(this.log);
     this.log(chalk.bold.green('Successfully created new component...'));
   }
 });

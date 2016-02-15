@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-browserify",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Angular 1.x/Browserify component and app yeoman generator",
   "author": "Mike DeWitt <mdewitt07@gmail.com>",
   "license": "MIT",
@@ -11,10 +11,13 @@
   "files": [
     "app",
     "component",
-    "service"
+    "service",
+    "state"
   ],
   "dependencies": {
+    "ast-query": "^1.1.0",
     "chalk": "^1.1.1",
+    "html-wiring": "^1.2.0",
     "yeoman-generator": "^0.20.3"
   }
 }
