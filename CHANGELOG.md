@@ -1,3 +1,7 @@
+# v0.2.1
+
+This is a patch for the missing lib/helpers.js dependency that was left out of the last release.
+
 # v0.2.0
 
 We've added a Redux generator.  There are also some helper methods that have been added into lib/helpers.js.
