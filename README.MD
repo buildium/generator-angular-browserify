@@ -68,7 +68,16 @@ If you choose yes to the first question, the reducer and actions files will be c
 
 If you choose yes to the second question, it will attempt to update the existing index.js file in state/ to include
 the new reducer.
-* 
+
+#Configuration
+You can configure this generator by editing the yo-rc.json file
+
+```
+addFilesToProjVS
+```
+
+If you work with Visual Studio, this message will be a reminder to add Yeoman-generated files to your Visual Studio project.
+
 
 #License
 

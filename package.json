@@ -13,7 +13,8 @@
     "component",
     "service",
     "state",
-    "lib"
+    "lib",
+    "yo-rc.json"
   ],
   "dependencies": {
     "ast-query": "^1.1.0",
