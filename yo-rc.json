@@ -1,5 +1,5 @@
 {
 	"generator-angular-browserify": {
-		"add-files-to-proj-vs": false
+		"addFilesToProjVS": false
 	}
 }

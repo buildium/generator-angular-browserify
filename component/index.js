@@ -46,7 +46,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
   complete: function() {
-    if(!this.config.get('addFilesToProjVS')) {
+    if(this.config.get('addFilesToProjVS')) {
       helpers.logVSWarning(this.log);
     }
     this.log(chalk.bold.green('Successfully created new component...'));
