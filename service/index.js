@@ -35,7 +35,9 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
   complete: function() {
-    helpers.logVSWarning(this.log);
+    if(this.config.get('addFilesToProjVS')) {
+      helpers.logVSWarning(this.log);
+    }
     this.log(chalk.bold.green('Successfully created new service...'));
   }
 });

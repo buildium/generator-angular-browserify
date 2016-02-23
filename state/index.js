@@ -68,7 +68,9 @@ module.exports = generators.Base.extend({
   },
   complete: function() {
     this.log(chalk.bold.red('If this is a whole new state folder, make sure you require it as the third parameter of createReduxApp in your app\'s index.js \n'));
-    helpers.logVSWarning(this.log);
+    if(this.config.get('addFilesToProjVS')) {
+      helpers.logVSWarning(this.log);
+    }
     this.log(chalk.bold.green('Successfully created new state slice...'));
   }
 });
