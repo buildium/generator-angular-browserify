@@ -1,3 +1,7 @@
+# v0.3.0
+
+This release adds a simple page generator, and adds configuration options starting with the warning to the user about updating Visual Studio project files.
+
 # v0.2.1
 
 This is a patch for the missing lib/helpers.js dependency that was left out of the last release.
