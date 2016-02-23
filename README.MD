@@ -37,14 +37,15 @@ my-new-component/
 
 #Options
 
-###Components
 
-When creating a new component, you will be prompted with two questions:
+###Components and Pages
+
+When creating a new component or page, you will be prompted with two questions:
 
 * Would you like to include a LESS file? (self explanatory...)
-* What would you like to call the main function in this component?
+* What would you like to call the main function?
 
-This will name the outer wrapper function of the component, and construct the name of the controller function within the component.
+This will name all the functions in your page or controller boilerplate.
 
 ###Services
 
