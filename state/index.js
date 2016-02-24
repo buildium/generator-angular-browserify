@@ -6,11 +6,11 @@ var readFileAsString = require('html-wiring').readFileAsString;
 var helpers = require('../lib/helpers');
 
 var prompts = [{
-  type: 'confirm',
-  name: 'createAsSubfolder',
-  message: 'Create state slice in its own folder in state/?',
-  default: true
-},
+    type: 'confirm',
+    name: 'createAsSubfolder',
+    message: 'Create state slice in its own folder in state/?',
+    default: true
+  },
   {
     type: 'confirm',
     name: 'updateIndex',

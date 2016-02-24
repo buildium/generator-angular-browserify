@@ -34,6 +34,9 @@ module.exports = generators.Base.extend({
       done();
     }.bind(this));
   },
+  checkVSConfig: function() {
+    helpers.checkVSConfig(this);
+  },
   complete: function() {
     if(this.config.get('addFilesToProjVS')) {
       helpers.logVSWarning(this.log);

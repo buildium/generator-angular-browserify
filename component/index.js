@@ -53,25 +53,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
   checkVSConfig: function() {
-    var addFilesToProjVS = this.config.get('addFilesToVSReminder');
-    var done = this.async();
-    
-    if(typeof addFilesToProjVS === 'undefined') {
-      this.prompt({
-        type    : 'confirm',
-        name    : 'vsReminder',
-        message : 'Do you use Visual Studio?  Would you like to set a reminder to add your Yeoman generated files to your csproj file?',
-        default : true
-      }, function vsPromptAnswer(answers) {
-          this.config.set('addFilesToVSReminder', answers.vsReminder);
-          done();
-      }.bind(this));
-    } else {
-      if(addFilesToProjVS) {
-        helpers.logVSWarning(this.log);
-        done();
-      }
-    }  
+    helpers.checkVSConfig(this);
   },
   complete: function() {
     this.log(chalk.bold.green('Successfully created new component...'));
