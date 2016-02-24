@@ -42,7 +42,7 @@ my-new-component/
 
 When creating a new component or page, you will be prompted with three questions:
 
-* From this directory, what is the file path where you would like to put this component? (Add the trailing slash...)
+* From this directory, what is the file path where you would like to put this component/page? (Add the trailing slash...)
 * Would you like to include a LESS file? (self explanatory...)
 * What would you like to call the main function?
 
@@ -72,7 +72,7 @@ If you choose yes to the second question, it will attempt to update the existing
 the new reducer.
 
 #Configuration
-You can configure this generator by editing the yo-rc.json file in the root of the project directory where the generator is usually run.
+You can configure this generator by editing the yo-rc.json file in the root of the project directory where the generator is usually run from.
 
 ```
 addFilesToVSReminder
