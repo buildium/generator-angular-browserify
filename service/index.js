@@ -6,7 +6,7 @@ var prompts = [{
       type    : 'input',
       name    : 'filePath',
       message : 'From this directory, what is the file path where you would like to put this service? (Add the trailing slash...)',
-      default : ''
+      store: true
     }, {
       type    : 'input',
       name    : 'methodName',
