@@ -31,8 +31,6 @@ module.exports = generators.Base.extend({
     this.prompt(prompts, function promptCallback(answers) {
       var filePath = helpers.addTrailingSlashToFilePath(answers.filePath);
       
-      console.log(filePath);
-      
       this.fs.copyTpl(
         this.templatePath('component.html'),
         this.destinationPath(filePath + name + '/' + name + '.html')
