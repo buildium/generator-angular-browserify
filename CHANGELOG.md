@@ -1,6 +1,6 @@
 # v0.3.1
 
-The config options have been fixed and centralized.  Also, the service generator is more consistent with the page/component generators.
+The config option setting/checking has been fixed and centralized into a helper function.  Also, the service generator is more consistent with the page/component generators.
 
 # v0.3.0
 
