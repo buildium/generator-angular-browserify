@@ -29,7 +29,9 @@ module.exports = generators.Base.extend({
     var name = this.componentName;
 
     this.prompt(prompts, function promptCallback(answers) {
-      var filePath = answers.filePath;
+      var filePath = helpers.addTrailingSlashToFilePath(answers.filePath);
+      
+      console.log(filePath);
       
       this.fs.copyTpl(
         this.templatePath('component.html'),
