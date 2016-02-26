@@ -3,6 +3,11 @@ var chalk = require('chalk');
 var helpers = require('../lib/helpers');
 
 var prompts = [{
+      type    : 'input',
+      name    : 'filePath',
+      message : 'From this directory, what is the file path where you would like to put this component? (Add the trailing slash...)',
+      store: true
+    }, {
       type    : 'confirm',
       name    : 'addLessFile',
       message : 'Would you like to add a LESS file to this component?',
@@ -24,31 +29,33 @@ module.exports = generators.Base.extend({
     var name = this.componentName;
 
     this.prompt(prompts, function promptCallback(answers) {
+      var filePath = answers.filePath;
+      
       this.fs.copyTpl(
         this.templatePath('component.html'),
-        this.destinationPath(name + '/' + name + '.html')
+        this.destinationPath(filePath + name + '/' + name + '.html')
       );
 
       if(answers.addLessFile) {
         this.fs.copyTpl(
           this.templatePath('component.less'),
-          this.destinationPath(name + '/' + name + '.less')
+          this.destinationPath(filePath + name + '/' + name + '.less')
         );
       }
 
       this.fs.copyTpl(
         this.templatePath('component.js'),
-        this.destinationPath(name + '/' + name + '.js'),
+        this.destinationPath(filePath + name  + '/' + name + '.js'),
           {templateFileName: name, methodName: answers.methodName}
       );
 
       done();
     }.bind(this));
   },
+  checkVSConfig: function() {
+    helpers.checkVSConfig(this);
+  },
   complete: function() {
-    if(this.config.get('addFilesToProjVS')) {
-      helpers.logVSWarning(this.log);
-    }
     this.log(chalk.bold.green('Successfully created new component...'));
   }
 });

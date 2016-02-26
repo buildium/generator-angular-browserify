@@ -3,15 +3,20 @@ var chalk = require('chalk');
 var helpers = require('../lib/helpers');
 
 var prompts = [{
+      type    : 'input',
+      name    : 'filePath',
+      message : 'From this directory, what is the file path where you would like to put this page? (Add the trailing slash...)',
+      store: true
+    }, {
       type    : 'confirm',
       name    : 'addLessFile',
       message : 'Would you like to add a LESS file to this page?',
-      default : false
+      default : true
     }, {
       type    : 'input',
       name    : 'methodName',
-      message : 'What would you like to call the controller function on this page?',
-      default : 'NewPage'
+      message : 'What would you like to call the main function on this page?',
+      default : 'Newpage'
     }];
 
 module.exports = generators.Base.extend({
@@ -24,32 +29,33 @@ module.exports = generators.Base.extend({
     var name = this.pageName;
 
     this.prompt(prompts, function promptCallback(answers) {
+      var filePath = answers.filePath;
+      
       this.fs.copyTpl(
         this.templatePath('page.html'),
-        this.destinationPath(name + '/' + name + '.html')
+        this.destinationPath(filePath + name + '/' + name + '.html')
       );
 
       if(answers.addLessFile) {
         this.fs.copyTpl(
           this.templatePath('page.less'),
-          this.destinationPath(name + '/' + name + '.less')
+          this.destinationPath(filePath + name + '/' + name + '.less')
         );
       }
 
       this.fs.copyTpl(
         this.templatePath('page.js'),
-        this.destinationPath(name + '/' + name + '.js'),
+        this.destinationPath(filePath + name  + '/' + name + '.js'),
           {templateFileName: name, methodName: answers.methodName}
       );
 
       done();
     }.bind(this));
   },
+  checkVSConfig: function() {
+    helpers.checkVSConfig(this);
+  },
   complete: function() {
-    if(this.config.get('addFilesToProjVS')) {
-      helpers.logVSWarning(this.log);
-    }
     this.log(chalk.bold.green('Successfully created new page...'));
-    this.log(chalk.bold.green('Add this new page to your routes file!'));
   }
 });

@@ -4,15 +4,14 @@ var helpers = require('../lib/helpers');
 
 var prompts = [{
       type    : 'input',
-      name    : 'methodName',
-      message : 'What would you like to call the service?',
-      default : 'NewService'
-    },
-    {
+      name    : 'filePath',
+      message : 'From this directory, what is the file path where you would like to put this service? (Add the trailing slash...)',
+      store: true
+    }, {
       type    : 'input',
-      name    : 'directory',
-      message : 'What is the output subdirectory?',
-      default : 'services'
+      name    : 'methodName',
+      message : 'What would you like to call the main method in this service?',
+      default : 'NewService'
     }];
 
 module.exports = generators.Base.extend({
@@ -25,19 +24,21 @@ module.exports = generators.Base.extend({
     var name = this.serviceName;
 
     this.prompt(prompts, function promptCallback(answers) {
+      var filePath = answers.filePath;
+      
       this.fs.copyTpl(
         this.templatePath('service.js'),
-        this.destinationPath(answers.directory + '/' + name + '.js'),
+        this.destinationPath(filePath + name + '/' + name + '.js'),
         {methodName: answers.methodName}
       );
 
       done();
     }.bind(this));
   },
+  checkVSConfig: function() {
+    helpers.checkVSConfig(this);
+  },
   complete: function() {
-    if(this.config.get('addFilesToProjVS')) {
-      helpers.logVSWarning(this.log);
-    }
     this.log(chalk.bold.green('Successfully created new service...'));
   }
 });

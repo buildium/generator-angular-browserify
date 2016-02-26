@@ -40,8 +40,9 @@ my-new-component/
 
 ###Components and Pages
 
-When creating a new component or page, you will be prompted with two questions:
+When creating a new component or page, you will be prompted with three questions:
 
+* From this directory, what is the file path where you would like to put this component/page? (Add the trailing slash...)
 * Would you like to include a LESS file? (self explanatory...)
 * What would you like to call the main function?
 
@@ -51,10 +52,10 @@ This will name all the functions in your page or controller boilerplate.
 
 When creating a new service, you will be prompted with two questions:
 
-* What would you like to call the service? (Default: *NewService*)
-* What is the output subdirectory? (Default: *services*)
+* From this directory, what is the file path where you would like to put this component/page? (Add the trailing slash...)
+* What would you like to call the main method in this service?
 
-This will name the outer wrapper function of the service, and create the service file in the specified subdirectory.
+This will name the outer wrapper function of the service, and create the service file in the specified directory.
 
 ###State (Redux)
 When creating state slices for using Redux, you will be prompted with two questions:
@@ -71,10 +72,10 @@ If you choose yes to the second question, it will attempt to update the existing
 the new reducer.
 
 #Configuration
-You can configure this generator by editing the yo-rc.json file
+You can configure this generator by editing the yo-rc.json file in the root of the project directory where the generator is usually run from.
 
 ```
-addFilesToProjVS
+addFilesToVSReminder
 ```
 
 If you work with Visual Studio, this message will be a reminder to add Yeoman-generated files to your Visual Studio project.
