@@ -52,10 +52,10 @@ This will name all the functions in your page or controller boilerplate.
 
 When creating a new service, you will be prompted with two questions:
 
-* What would you like to call the service? (Default: *NewService*)
-* What is the output subdirectory? (Default: *services*)
+* From this directory, what is the file path where you would like to put this component/page? (Add the trailing slash...)
+* What would you like to call the main method in this service?
 
-This will name the outer wrapper function of the service, and create the service file in the specified subdirectory.
+This will name the outer wrapper function of the service, and create the service file in the specified directory.
 
 ###State (Redux)
 When creating state slices for using Redux, you will be prompted with two questions:

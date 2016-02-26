@@ -1,3 +1,7 @@
+# v0.3.1
+
+The config options have been fixed and centralized.  Also, the service generator is more consistent with the page/component generators.
+
 # v0.3.0
 
 This release adds a simple page generator, and adds configuration options starting with the warning to the user about updating Visual Studio project files.

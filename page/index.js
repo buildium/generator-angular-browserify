@@ -15,7 +15,7 @@ var prompts = [{
     }, {
       type    : 'input',
       name    : 'methodName',
-      message : 'What would you like to call the main function in this page?',
+      message : 'What would you like to call the main function on this page?',
       default : 'Newpage'
     }];
 
