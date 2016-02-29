@@ -1,3 +1,7 @@
+# v0.3.2
+
+Added method to check for the trailing slash in file paths, and add it in case it isn't there.
+
 # v0.3.1
 
 The config option setting/checking has been fixed and centralized into a helper function.  Also, the service generator is more consistent with the page/component generators.

@@ -24,7 +24,7 @@ module.exports = generators.Base.extend({
     var name = this.serviceName;
 
     this.prompt(prompts, function promptCallback(answers) {
-      var filePath = answers.filePath;
+      var filePath = helpers.addTrailingSlashToFilePath(answers.filePath);
       
       this.fs.copyTpl(
         this.templatePath('service.js'),
