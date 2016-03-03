@@ -20,25 +20,20 @@ Install this generator via npm:
 npm install --global generator-angular-browserify
 ```
 
-Run the component sub generator using:
+#Options
+
+
+###Components and Pages
 
 ```
 yo angular-browserify:component my-new-component
 ```
 
-Using the argument as a name, this command will create a new directory and boilerplate files for your component:
+or
 
 ```
-my-new-component/
-    my-new-component.html
-    my-new-component.js
-    my-new-component.less
+yo angular-browserify:page my-new-page
 ```
-
-#Options
-
-
-###Components and Pages
 
 When creating a new component or page, you will be prompted with three questions:
 
@@ -46,7 +41,16 @@ When creating a new component or page, you will be prompted with three questions
 * Would you like to include a LESS file? (self explanatory...)
 * What would you like to call the main function?
 
-This will name all the functions in your page or controller boilerplate.
+This final question will name all the functions in your page/component boilerplate code.  
+
+Using the argument as a name, this generator will create a new directory and boilerplate files for your component/page, like so:
+
+```
+my-new-component/
+    my-new-component.html
+    my-new-component.js
+    my-new-component.less
+```
 
 ###Services
 
