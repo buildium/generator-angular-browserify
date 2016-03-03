@@ -1,6 +1,6 @@
 Angular 1.x/Browserify component and app Yeoman generator
 
-#Usage
+#Installation
 
 Install Yeoman
 
@@ -20,8 +20,7 @@ Install this generator via npm:
 npm install --global generator-angular-browserify
 ```
 
-#Options
-
+#Usage
 
 ###Components and Pages
 
