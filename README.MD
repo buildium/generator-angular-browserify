@@ -8,16 +8,10 @@ Install Yeoman
 npm install -g yo
 ```
 
-Install the generator
-
-```
-npm install -g generator-angular-browserify
-```
-
 Install this generator via npm:
 
 ```
-npm install --global generator-angular-browserify
+npm install --g generator-angular-browserify
 ```
 
 #Usage
