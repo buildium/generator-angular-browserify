@@ -11,7 +11,7 @@ npm install -g yo
 Install this generator via npm:
 
 ```
-npm install --g generator-angular-browserify
+npm install -g generator-angular-browserify
 ```
 
 #Usage
