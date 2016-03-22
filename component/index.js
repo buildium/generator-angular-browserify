@@ -1,6 +1,7 @@
 var generators = require('yeoman-generator');
 var chalk = require('chalk');
 var helpers = require('../lib/helpers');
+var skipAllPrompts = false;
 
 //Prompts
 var prompts = [{
@@ -34,10 +35,10 @@ function createFilesHelper(filePath, addLess, methodName, name) {
     );
   }
 
-    this.fs.copyTpl(
-      this.templatePath('component.js'),
-      this.destinationPath(filePath + name  + '/' + name + '.js'),
-      {templateFileName: name, methodName: methodName}
+  this.fs.copyTpl(
+    this.templatePath('component.js'),
+    this.destinationPath(filePath + name  + '/' + name + '.js'),
+    {templateFileName: name, methodName: methodName}
   );
 }
 
@@ -70,6 +71,7 @@ module.exports = generators.Base.extend({
         done();
       }.bind(this)); 
     } else {
+        skipAllPrompts = true;
         //Convert the string arg for less to a bool
         addLess = (addLess === 'true');
         filePath = helpers.addTrailingSlashToFilePath(filePath);
@@ -78,7 +80,9 @@ module.exports = generators.Base.extend({
     }
   },
   checkVSConfig: function() {
-    helpers.checkVSConfig(this);
+    if(!skipAllPrompts) {
+      helpers.checkVSConfig(this);
+    }
   },
   complete: function() {
     this.log(chalk.bold.green('Successfully created new component...'));
