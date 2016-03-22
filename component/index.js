@@ -21,7 +21,7 @@ var prompts = [{
     }];
 
 //Helper methods   
-function createFilesHelper(filePath, addLess, methodName) {
+function createFilesHelper(filePath, addLess, methodName, name) {
   this.fs.copyTpl(
     this.templatePath('component.html'),
     this.destinationPath(filePath + name + '/' + name + '.html')
@@ -66,14 +66,14 @@ module.exports = generators.Base.extend({
         filePath =  helpers.addTrailingSlashToFilePath(answers.filePath);
         addLess = answers.addLessFile;
         methodName = answers.methodName;
-        createFilesHelper.apply(this, [filePath, addLess, methodName]);
+        createFilesHelper.apply(this, [filePath, addLess, methodName, name]);
         done();
       }.bind(this)); 
     } else {
         //Convert the string arg for less to a bool
         addLess = (addLess === 'true');
         filePath = helpers.addTrailingSlashToFilePath(filePath);
-        createFilesHelper.apply(this, [filePath, addLess, methodName]);
+        createFilesHelper.apply(this, [filePath, addLess, methodName, name]);
         done();
     }
   },
