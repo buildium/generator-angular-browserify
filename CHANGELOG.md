@@ -1,6 +1,6 @@
 # v0.3.4
 
-Added ability to use only arguments so it is possible to skip the prompts for the page and servicee generators.  Also add unit tests for page/service generators.
+Added ability to use only arguments so it is possible to skip the prompts for the page and service generators.  Also add unit tests for page/service generators.
 
 # v0.3.3
 
