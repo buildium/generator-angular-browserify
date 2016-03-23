@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-browserify",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Angular 1.x/Browserify component and app yeoman generator",
   "author": "Mike DeWitt <mdewitt07@gmail.com>",
   "license": "MIT",
@@ -21,6 +21,14 @@
     "ast-query": "^1.1.0",
     "chalk": "^1.1.1",
     "html-wiring": "^1.2.0",
+    "yeoman-assert": "^2.1.1",
     "yeoman-generator": "^0.20.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "yeoman-test": "^1.1.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests/*.js --reporter spec"
   }
 }

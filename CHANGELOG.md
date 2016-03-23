@@ -1,3 +1,9 @@
+# v0.3.3
+
+Added ability to use only arguments so it is possible to skip the prompts for the component generator.  Ultimately we can use Visual Studio shortcuts to do one click installs of components. 
+
+Also added unit tests for the component generator.
+
 # v0.3.2
 
 Added method to check for the trailing slash in file paths, and add it in case it isn't there.
