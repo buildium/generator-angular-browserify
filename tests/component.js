@@ -2,6 +2,9 @@ var helpers = require('yeoman-test');
 var path = require('path');
 var assert = require('yeoman-assert');
 
+var expectedFilesWithoutLess = ['test/my-component/my-component.js', 'test/my-component/my-component.html'];
+var expectedFilesWithLess = ['test/my-component/my-component.js', 'test/my-component/my-component.html', 'test/my-component/my-component.less']
+
 describe('angular-browserify:component', function () {
   //Using the prompts...
   describe('when using just the name argument, and choosing to add a less file', function () {
@@ -17,9 +20,7 @@ describe('angular-browserify:component', function () {
     });
 
     it('generates the component files', function () {
-      assert.file(['test/my-component/my-component.js', 
-                  'test/my-component/my-component.html', 
-                  'test/my-component/my-component.less']);
+      assert.file(expectedFilesWithLess);
     });
     
     it('adds the method name to the JS file', function () {
@@ -40,7 +41,7 @@ describe('angular-browserify:component', function () {
     });
 
     it('generates the component files without a less file', function () {
-      assert.file(['test/my-component/my-component.js', 'test/my-component/my-component.html']);
+      assert.file(expectedFilesWithoutLess);
       assert.noFile('test/my-component/my-component.less');
     });
   });
@@ -54,9 +55,7 @@ describe('angular-browserify:component', function () {
     });
 
     it('generates the component files', function () {
-      assert.file(['test/my-component/my-component.js', 
-                  'test/my-component/my-component.html', 
-                  'test/my-component/my-component.less']);
+      assert.file(expectedFilesWithLess);
     });
     
     it('adds the method name to the JS file', function () {
@@ -72,7 +71,7 @@ describe('angular-browserify:component', function () {
     });
 
     it('generates the component files without a less file', function () {
-      assert.file(['test/my-component/my-component.js', 'test/my-component/my-component.html']);
+      assert.file(expectedFilesWithoutLess);
       assert.noFile('test/my-component/my-component.less');
     });
   });
