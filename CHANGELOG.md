@@ -1,6 +1,6 @@
 # v0.3.3
 
-Added ability to use only arguments so it is possible to skip the prompts for the component generator.  
+Added ability to use only arguments so it is possible to skip the prompts for the component generator.  Ultimately we can use Visual Studio shortcuts to do one click installs of components. 
 
 Also added unit tests for the component generator.
 
