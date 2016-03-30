@@ -2,15 +2,18 @@ var helpers = require('yeoman-test');
 var path = require('path');
 var assert = require('yeoman-assert');
 
-var expectedServiceFile = ['myApp/services/my-service/my-service.js'];
+var expectedServiceFile = ['myApp/app/services/my-service/my-service.js',
+                           'myApp/app/services/index.js'];
 
-var expectedPageFiles = ['myApp/pages/my-page/my-page.js', 
-                         'myApp/pages/my-page/my-page.html', 
-                         'myApp/pages/my-page/my-page.less'];
+var expectedPageFiles = ['myApp/app/pages/my-page/my-page.js', 
+                         'myApp/app/pages/my-page/my-page.html', 
+                         'myApp/app/pages/my-page/my-page.less',
+                         'myApp/app/pages/index.js'];
                          
-var expectedComponentFiles = ['myApp/components/my-component/my-component.js', 
-                              'myApp/components/my-component/my-component.html', 
-                              'myApp/components/my-component/my-component.less'];
+var expectedComponentFiles = ['myApp/app/components/my-component/my-component.js', 
+                              'myApp/app/components/my-component/my-component.html', 
+                              'myApp/app/components/my-component/my-component.less',
+                              'myApp/app/components/index.js'];
                              
 
 describe('angular-browserify', function () {
@@ -35,7 +38,7 @@ describe('angular-browserify', function () {
     });
     
     it('adds the method name to the JS file', function () {
-      assert.fileContent('myApp/services/my-service/my-service.js', /myService/);
+      assert.fileContent('myApp/app/services/my-service/my-service.js', /myService/);
     });
     
     //Pages
@@ -44,7 +47,7 @@ describe('angular-browserify', function () {
     });
     
     it('adds the method name to the JS file', function () {
-      assert.fileContent('myApp/pages/my-page/my-page.js', /myPage/);
+      assert.fileContent('myApp/app/pages/my-page/my-page.js', /myPage/);
     });
     
     //Components
@@ -53,7 +56,12 @@ describe('angular-browserify', function () {
     });
     
     it('adds the method name to the JS file', function () {
-      assert.fileContent('myApp/components/my-component/my-component.js', /myComponent/);
+      assert.fileContent('myApp/app/components/my-component/my-component.js', /myComponent/);
+    });
+    
+    //HTML File
+    it('creates the index.html file', function () {
+      assert.file('myApp/index.html');
     });
   });
 });
