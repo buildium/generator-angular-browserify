@@ -18,7 +18,7 @@ module.exports = generators.Base.extend({
       });
     
       this.composeWith('angular-browserify:service', {
-        args : ['my-service', appNameFolder + 'services/', 'true', 'myService']
+        args : ['my-service', appNameFolder + 'services/', 'myService']
       });
     
       this.composeWith('angular-browserify:page', {
