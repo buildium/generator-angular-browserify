@@ -28,7 +28,7 @@ function createFilesHelper(filePath, methodName, name) {
 module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
-    this.argument('pageName', { type: String, required: true });
+    this.argument('serviceName', { type: String, required: true });
     
     //Optional args for using VS shortcuts
     this.argument('filePathArg', { type: String, required: false });
@@ -37,7 +37,7 @@ module.exports = generators.Base.extend({
   },
   createFiles: function() {
     var done = this.async();
-    var name = this.pageName;
+    var name = this.serviceName;
     var filePath = this.filePathArg;
     var methodName = this.methodNameArg;
     
